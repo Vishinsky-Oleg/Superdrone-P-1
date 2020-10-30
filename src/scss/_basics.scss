@@ -1,0 +1,25 @@
+body {
+    background: $sub-clr;
+    color: $main-clr;
+    font-family: "proxima-nova", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    position: relative;
+    color: $main-clr;
+    font-weight: bold;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px solid $main-clr;
+        transform: skewX(-15deg);
+    }
+}

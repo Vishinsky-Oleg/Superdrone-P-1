@@ -1,0 +1,123 @@
+.logo {
+    a {
+        text-decoration: none;
+        color: $main-clr;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 43px;
+    z-index: 3;
+    &-list {
+        //Actual list with items
+        position: absolute;
+        top: -800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        background: black;
+        visibility: hidden;
+        list-style-type: none;
+        @include transition-ease;
+        &.open {
+            visibility: visible;
+            transform: translateY(843px);
+        }
+    }
+    &-item {
+        font-weight: bold;
+        margin-bottom: 50px;
+        font-size: 1.8rem;
+        opacity: 90%;
+        transform: translateX(150vw);
+        transition: all 0.3s ease-in;
+        > a {
+            text-decoration: none;
+            color: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+        &.open {
+            transform: translateX(0);
+            &::before {
+                width: 60%;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1%;
+            border-top: 2px white solid;
+            transition: all 2s ease-in-out;
+        }
+    }
+
+    &-icon {
+        position: relative;
+        top: 24px;
+        display: block;
+        background: $main-clr;
+        height: 2px;
+        width: 27px;
+        margin: 0 auto;
+        @include transition-ease;
+
+        &::before {
+            content: "";
+            background: $main-clr;
+            position: absolute;
+            top: 6px;
+            right: 0px;
+            height: 2px;
+            width: 27px;
+            @include transition-ease;
+        }
+        &::after {
+            content: "";
+            background: $main-clr;
+            position: absolute;
+            top: -6px;
+            right: 0px;
+            height: 2px;
+            width: 27px;
+            @include transition-ease;
+        }
+        &.open {
+            transform: rotate(720deg);
+            background: transparent;
+
+            &::after {
+                transform: rotate(45deg) translate(3.6px, 6px);
+            }
+
+            &::before {
+                width: 28px;
+                transform: rotate(-45deg) translate(2.7px, -4px);
+            }
+        }
+    }
+    &-icon-bg {
+        position: absolute;
+        top: 15px;
+        right: 8%;
+        z-index: 3;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: $para-clr;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

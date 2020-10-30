@@ -1,0 +1,27 @@
+@import "config";
+@import "typography";
+@import "navbar";
+@import "basics";
+
+.greetings {
+    height: (100vh - 43px);
+    background-image: url(../../src/img/bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    &-para {
+        text-indent: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+@import "media";
