@@ -8,10 +8,12 @@
 }
 
 .navbar {
+    position: absolute;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: $sub-clr;
     top: 0px;
     position: fixed;
     width: 100vw;
@@ -119,5 +121,11 @@
         background: $para-clr;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
+    }
+}
+
+@for $i from 1 through 4 {
+    .navbar-item:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s;
     }
 }

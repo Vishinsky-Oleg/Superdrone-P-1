@@ -24,8 +24,8 @@
                 <li class="to-upper navbar-item"><a href="">blog</a></li>
             </ul>
         </nav>
-        <a href="#" class="cart"><img src="./dist/img/cart.png" alt="Cart icon" class="cart-img"></a>
-        <button class="login-btn to-upper">login</button>
+        <!-- <a href="#" class="cart"><img src="./dist/img/cart.png" alt="Cart icon" class="cart-img"></a>
+        <button class="login-btn to-upper">login</button> -->
     </header>
     <main class="container-fluid">
         <!-- Greetings section -->
@@ -36,45 +36,55 @@
             <button class="greetings-btn to-upper">buy now</button>
         </section>
         <!-- Super line drone -->
-        <section>
-            <h2>Super Light Drone</h2>
-            <p>More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
+        <section class="first">
+            <div class="first-image-container"><img srcset="./dist/img/copter1-sm.png 350w,
+            ./dist/img/copter1.png 836w" sizes="(max-width: 768px) 350px, 836px" src="./dist/img/copter1.png"
+                    alt="Drone #1" class="first-image"></div>
+            <h2 class="first-heading">Super Light Drone</h2>
+            <p class="first-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
             with something, anything. Consider them interactive but informative animations. There are many reasons to use
             microinteractions. I can give you four right now.
             
             The first good thing about microinteractions is improved usability. If the animation of the menu, from the example I
             gave above, slides down and over the content the user was just looking at, it provides affirmation for the user. This
             animation lets the user know what’s going on through visual cues.</p>
-            <button class="more-btn to-upper">read more</button>
+            <button class="first-btn to-upper">read more</button>
         </section>
         <!-- Slider with custom video player -->
         <section>
 
         </section>
         <!-- Super servise section -->
-        <section>
-            <h2>Super service</h2>
-            <p
-                class="sub-para">The first good thing about microinteractions is improved usability. If the animation of the menu, from the example I
+        <section class="third">
+            <article class="third-heading">
+                <h2 class="third-heading-h2">Super service</h2>
+                <p
+                    class="sub-para third-para">The first good thing about microinteractions is improved usability. If the animation of the menu, from the example I
             gave above, slides down and over the content the user was just looking at, it provides affirmation for the user.</p>
-            <article>
-                <img src="./dist/img/4k-cam.png" alt="4k resolution camera">
+            </article>
+            <article class="third-article1">
+                <div class="camera">
+                    <img src="./dist/img/4k-cam.png" alt="4k resolution camera" id="camera-4k"><img
+                        src="./dist/img/4k-cam-action.png" alt="4k resolution camera" id="camera-4k-act">
+                </div>
+                <!-- <div id="camera-4k"></div> -->
                 <h4 class="to-upper">4k resolution</h4>
-                <p class="sub-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
+                <p class="sub-para third-article-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
                 with something, anything. Consider them interactive but informative animations. There are many reasons to use
                 microinteractions. I can give you four right now.</p>
             </article>
-            <article>
-                <img src="./dist/img/sand-w.png" alt="sand watch">
+            <article class="third-article2">
+                <img src="./dist/img/sand-w.png" alt="sand watch" class="sand-watch">
                 <h4 class="to-upper">timelapse</h4>
-                <p class="sub-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
+                <p class="sub-para third-article-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
                 with something, anything. Consider them interactive but informative animations. There are many reasons to use
                 microinteractions. I can give you four right now.</p>
             </article>
-            <article>
-                <img src="./dist/img/stop-w.png" alt="sand watch">
+            <article class="third-article3">
+                <div class="stop-w"><img src="./dist/img/stop-w.png" alt="stop watch"  class="stop-w-outer"><img src="./dist/img/stop-w-inner.png"
+                alt="sand watch" class="stop-w-inner"></div>
                 <h4 class="to-upper">super speed</h4>
-                <p class="sub-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
+                <p class="sub-para third-article-para">More specifically, microinteractions are the animations and changes of the interface that happen once a user interacts
                 with something, anything. Consider them interactive but informative animations. There are many reasons to use
                 microinteractions. I can give you four right now.</p>
             </article>

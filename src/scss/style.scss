@@ -2,10 +2,11 @@
 @import "typography";
 @import "navbar";
 @import "basics";
+@import "animations";
 
 .greetings {
-    height: (100vh - 43px);
-    background-image: url(../../src/img/bg-mobile.jpg);
+    height: 100vh;
+    background-image: url(../img/bg-sm.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -15,13 +16,62 @@
     justify-content: center;
     &-para {
         text-indent: 1rem;
-        padding-bottom: 1rem;
+        padding: 0 8% 1rem 8%;
+        color: $main-clr;
     }
 }
 
 .container-fluid {
-    margin: 0;
     padding: 0;
 }
+
+.first {
+    height: 100vh;
+    background: linear-gradient($sub-clr, #252525);
+    margin-top: 1rem;
+    &-heading {
+        position: relative;
+        top: -45px;
+        margin-left: 2.5rem;
+    }
+    &-image {
+        &-container {
+            text-align: right;
+        }
+    }
+    &-btn {
+        margin: 0 auto;
+    }
+}
+
+.third {
+    background: linear-gradient($sub-clr, #252525);
+    margin-top: 1rem;
+    &-heading-h2 {
+        padding-top: 1rem;
+        margin-left: 2.5rem;
+    }
+    & > article > h4,
+    img {
+        padding: 0 1.5rem;
+        display: inline;
+    }
+
+    &-article1,
+    &-article3 {
+        text-align: right;
+        margin: 0;
+    }
+    &-article2 {
+        text-align: left;
+        margin: 0;
+    }
+    &-article-para {
+        width: 88vw;
+        display: inline-block;
+        margin-right: 0;
+    }
+}
+
 
 @import "media";

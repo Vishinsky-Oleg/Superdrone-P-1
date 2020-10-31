@@ -1,0 +1,81 @@
+// CAMERA
+#camera-4k-act {
+    height: 40px;
+    width: 20px;
+    padding: 0;
+    margin-bottom: 15px;
+    animation: camera-action 0.8s infinite alternate;
+}
+.camera {
+    display: inline-block;
+    animation: camera 0.8s infinite alternate;
+}
+@keyframes camera-action {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes camera {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+// SAND WATCH
+.sand-watch {
+    animation: sand-watch 4s infinite alternate;
+}
+@keyframes sand-watch {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+// STOP WATCH
+.stop-w {
+    display: inline-block;
+    position: relative;
+    &-outer {
+        animation: stop-w-outer 2s infinite linear;
+    }
+    &-inner {
+        animation: stop-w-inner 2s infinite linear;
+        position: absolute;
+
+        bottom: 15px;
+        left: 10px;
+    }
+}
+
+@keyframes stop-w-inner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stop-w-outer {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

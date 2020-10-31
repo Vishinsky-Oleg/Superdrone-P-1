@@ -1,24 +1,42 @@
 @font-face {
-  font-family: 'proxima-nova';
-  src: url('../fonts/ProximaNova-Regular.eot');
-  src: url('../fonts/ProximaNova-Regular.woff') format('woff'),
-         url('../fonts/ProximaNova-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "proxima-nova";
+    src: url("../fonts/ProximaNova-Regular.eot");
+    src: url("../fonts/ProximaNova-Regular.woff") format("woff"),
+        url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'proxima-nova';
-  src: url('../fonts/ProximaNova-Bold.eot');
-  src: url('../fonts/ProximaNova-Bold.woff') format('woff'),
-         url('../fonts/ProximaNova-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: "proxima-nova";
+    src: url("../fonts/ProximaNova-Bold.eot");
+    src: url("../fonts/ProximaNova-Bold.woff") format("woff"),
+        url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
 }
 // mobile first typography
 h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+p {
+    text-indent: 1rem;
+    text-align: justify;
+    text-justify: auto;
+    padding: 2rem 1.5rem;
+    color: $para-clr;
 }
 
 // Uppercase text class
