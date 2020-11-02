@@ -67,7 +67,7 @@
         margin: 0;
     }
     &-article-para {
-        width: 88vw;
+        width: 75vw;
         display: inline-block;
         margin-right: 0;
     }
@@ -129,21 +129,44 @@
 }
 
 .footer {
+    text-align: right;
     &-social {
-        display: inline-block;
+        display: block;
 
         & > li {
             display: inline;
             & > i {
+                padding: 11px 0;
+                text-align: center;
                 color: black;
                 background-color: $main-clr;
-                padding: 10px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
             }
         }
     }
     &-addition {
         display: inline-block;
+    }
+    & > ul {
+        list-style: none;
+        & > li {
+            margin: 15px 10px;
+            color: $para-clr;
+            & > a {
+                text-decoration: none;
+                color: $para-clr;
+            }
+        }
+    }
+    &-contact {
+        &-number {
+            color: $main-clr;
+        }
+        &-email {
+            text-decoration: underline !important;
+        }
     }
 }
 @import "media";
