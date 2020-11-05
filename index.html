@@ -11,22 +11,25 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid">
 
-        <nav class="navbar">
-            <div class="logo to-upper"><a href="index.html">superdrone.</a></div>
-            <div class="navbar-icon-bg">
-                <span class="navbar-icon"></span>
-            </div>
+        <nav class="navbar navbar-lg">
+            <div class="navbar-logo to-upper"><a href="index.html">superdrone.</a></div>
             <ul class="navbar-list">
                 <li class="to-upper navbar-item"><a href="">meet the product</a></li>
                 <li class="to-upper navbar-item"><a href="">meet the company</a></li>
                 <li class="to-upper navbar-item"><a href="">support</a></li>
                 <li class="to-upper navbar-item"><a href="">blog</a></li>
             </ul>
+            <div class="navbar-hidden"><a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                <button class="login-btn to-upper">login</button>
+            </div>
+            <div class="navbar-icon-bg">
+                <span class="navbar-icon"></span>
+            </div>
+
         </nav>
-        <!-- <a href="#" class="cart"><img src="./dist/img/cart.png" alt="Cart icon" class="cart-img"></a>
-        <button class="login-btn to-upper">login</button> -->
+
     </header>
     <main class="container-fluid">
         <!-- Greetings section -->
@@ -67,7 +70,7 @@
                     <article class="third-heading">
                         <h2 class="third-heading-h2">Super service</h2>
                         <p
-                            class="sub-para third-para">The first good thing about microinteractions is improved usability. If the animation of the menu, from the example I
+                            class="sub-para third-para col-lg-8 offset-lg-2">The first good thing about microinteractions is improved usability. If the animation of the menu, from the example I
                 gave above, slides down and over the content the user was just looking at, it provides affirmation for the user.</p>
                     </article>
                 </div>
@@ -103,11 +106,12 @@
         </section>
         <!-- Item with charachteristics -->
         <section class="fourth">
-            <h3
-                class="fourth-heading">The world's first seamless drone with a very lightweight hull and high travel speed</h3>
-            <p
-                class="sub-para fourth-para">The V.360° Camera allows you to masterfully capture the whole story with a premium 360° camera for limitless creating.</p>
-            <!-- <div class="fourth-image-container"></div> -->
+            <div class="container">
+                <h3
+                    class="fourth-heading">The world's first seamless drone with a very lightweight hull and high travel speed</h3>
+                <p
+                    class="sub-para fourth-para col-lg-8 offset-lg-2">The V.360° Camera allows you to masterfully capture the whole story with a premium 360° camera for limitless creating.</p>
+            </div>
             <img srcset="./dist/img/copter2-sm.png 350w,
                                             ./dist/img/copter2.png 836w" sizes="(max-width: 768px) 350px, 836px"
                 src="./dist/img/copter2.png" alt="Drone #1" class="fourth-image">
@@ -169,47 +173,54 @@
         </section>
         <!-- Items slider -->
         <section class="fifth">
-            <h3 class="fifth-heading">Mount to anything. Anywhere.</h3>
-            <p class="sub-para">Fully compatible with GoPro® mounts, traditional cameras and tripod designs with a built in ¼ – 20 UNC tripod housing,
+            <div class="container">
+                <h3 class="fifth-heading">Mount to anything. Anywhere.</h3>
+                <p class="sub-para col-lg-8 offset-lg-2">Fully compatible with GoPro® mounts, traditional cameras and tripod designs with a built in ¼ – 20 UNC tripod housing,
             we’re made to mount anything. From helmets to handlebars, we go where you go.</p>
-            <!-- <img srcset="./dist/img/copter3-sm.png 400w,
-                                                        ./dist/img/copter3.png 1156w"
-                sizes="(max-width: 768px) 400w, 1156" src="./dist/img/copter3.png" alt="Drone #1" class="fifth-image"> -->
+                <!-- <img srcset="./dist/img/copter3-sm.png 400w,
+            ./dist/img/copter3.png 1156w"
+            sizes="(max-width: 768px) 400w, 1156" src="./dist/img/copter3.png" alt="Drone #1" class="fifth-image"> -->
+            </div>
         </section>
         <!-- add to cart section -->
-        <section class="sixth">
+        <section class="sixth container">
             <h3 class="sixth-heading">We Rent The Best Drones</h3>
             <p
                 class="sub-para sixth-para">If you’re looking for a portable drone or a pro tool, we have a drone for you!</p>
         </section>
     </main>
-    <footer class="footer">
-        <ul class="footer-addition">
-            <li>Terms & conditions</li>
-            <li>License agreement</li>
-            <li>Private policy</li>
-        </ul>
-        <ul class="footer-social">
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-facebook-square"></i></li>
-            <li><i class="fab fa-google"></i></li>
-            <li><i class="fab fa-youtube"></i></li>
-        </ul>
-        <ul class="footer-contact">
-            <li>
-                3 Hatamat Str., P.O.Box 35 2068201, Yoqneam littl, Israel
-            </li>
-            <li>
-                <a href="mailto:info@gmail.com" class="footer-contact-email">info@gmail.com</a>
-            </li>
-            <li>
-                <h4 class="footer-contact-number">
-                +1 800 123 456
-            </h4>
-            </li>
-        </ul>
+    <footer class="footer container">
+        <div class="row justify-content-between">
+            <ul class="footer-addition col-sm-12 justify-content-md-around col-lg-6">
+                <li>Terms & conditions</li>
+                <li>License agreement</li>
+                <li>Private policy</li>
+            </ul>
+            <ul class="footer-social col-sm-12 col-lg-6">
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-google"></i></li>
+                <li><i class="fab fa-youtube"></i></li>
+            </ul>
+        </div>
+        <div class="row">
+
+            <ul class="footer-contact col-lg-12">
+                <li>
+                    3 Hatamat Str., P.O.Box 35 2068201, Yoqneam littl, Israel
+                </li>
+                <li>
+                    <a href="mailto:info@gmail.com" class="footer-contact-email">info@gmail.com</a>
+                </li>
+                <li>
+                    <h4 class="footer-contact-number">
+    +1 800 123 456
+    </h4>
+                </li>
+            </ul>
+        </div>
         <p class="sub-para">
-        All rights reserved © 2020
+    All rights reserved © 2020
     </p>
     </footer>
 </body>

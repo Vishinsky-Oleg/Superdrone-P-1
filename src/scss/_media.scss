@@ -4,6 +4,10 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 576px) {
     .greetings {
+        &-heading {
+            font-size: 3rem;
+            letter-spacing: 0.2rem;
+        }
         height: 100vh;
         background-image: url(../img/bg.png);
     }
@@ -21,10 +25,81 @@
             text-align: center;
         }
     }
+    .footer {
+        &-addition {
+            & > li {
+                display: inline-block;
+            }
+        }
+        & ul {
+            margin: 1rem 0;
+        }
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
+    p {
+        font-size: 1.1rem;
+    }
+    header {
+        position: absolute;
+    }
+
+    .navbar {
+        all: unset;
+        &-lg {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+
+        &-logo {
+            display: inline-block;
+            // margin: 2rem 0 0 2rem;
+        }
+        &-hidden {
+            display: inline-block;
+            & > a > i {
+                padding: 0 30px 0 40px;
+                color: $main-clr;
+            }
+            order: 2;
+            & > a,
+            & > a > img,
+            & > button {
+                display: inline-block;
+            }
+        }
+        &-icon-bg {
+            display: none;
+        }
+        &-list {
+            all: unset;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 1rem;
+            order: 3;
+            flex-basis: 100%;
+        }
+        &-item {
+            all: unset;
+            text-transform: uppercase;
+            font-family: "proxima-nova", "Segoe UI", Tahoma, Geneva, Verdana,
+                sans-serif;
+            font-weight: bold;
+            &::before {
+                content: none;
+            }
+        }
+    }
+    .greetings {
+        &-heading {
+            font-size: 5rem;
+        }
+    }
+
     .first {
         &-heading {
             top: 0;
@@ -46,7 +121,7 @@
         &-article2,
         &-article3 {
             display: inline-block;
-            text-align: center;
+            text-align: left;
             & > h4 {
                 margin-top: 1rem;
             }
@@ -85,15 +160,110 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
+    .greetings {
+        &-heading {
+            font-size: 7rem;
+            letter-spacing: 0.3rem;
+        }
+    }
+    .third {
+        &-article-para {
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+    }
     .fourth {
         &-image {
             width: 38%;
+        }
+    }
+    .footer {
+        &-addition {
+            text-align: left;
+        }
+        &-contact {
+            display: flex;
+            justify-content: space-between;
+            & > li {
+                display: inline-block;
+            }
+        }
+        & ul {
+            margin: 2rem 0;
         }
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
+    button {
+        padding: 10px 25px;
+    }
+    .navbar {
+        &-logo {
+            & > a {
+                font-size: 2rem;
+                padding-left: 2rem;
+            }
+        }
+        &-list {
+            order: 2;
+            flex-basis: auto;
+        }
+        &-item {
+            margin: 0 1rem;
+        }
+        &-hidden {
+            & > a {
+                & > i {
+                    padding: 0 30px 0 40px;
+
+                    color: $main-clr;
+                }
+            }
+
+            order: 3;
+        }
+        &-lg {
+            order: 1;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    .greetings {
+        &-heading {
+            font-size: 7rem;
+            letter-spacing: 0.4rem;
+        }
+    }
+    .first {
+        &-heading {
+            font-size: 2.5rem;
+            margin-left: 0;
+        }
+        &-para {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-indent: 0;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        &-btn {
+            margin: 0;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+    }
+
+    .third {
+        &-article-para {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+            padding-left: 0;
+            text-indent: 0;
+        }
+    }
     .fourth {
         &-image {
             width: 30%;
