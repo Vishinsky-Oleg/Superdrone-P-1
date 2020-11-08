@@ -1,0 +1,27 @@
+.carousel {
+    &-indicators {
+        top: 0;
+        & > li {
+            height: 25px;
+            width: 28px;
+            border-radius: 50%;
+            margin: 1rem;
+        }
+    }
+    position: relative;
+    align-items: center;
+    &-arrow {
+        &s {
+            display: none;
+        }
+        font-size: 4rem;
+        position: absolute;
+        top: 30%;
+
+        margin: 3rem;
+        color: white;
+        &--right {
+            right: 0;
+        }
+    }
+}

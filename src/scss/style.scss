@@ -3,6 +3,7 @@
 @import "navbar";
 @import "basics";
 @import "animations";
+@import "slider";
 
 .greetings {
     // margin-top: 5rem;
@@ -32,9 +33,10 @@
 }
 
 .first {
-    height: 100vh;
+    height: auto;
     background: linear-gradient($sub-clr, #252525);
     margin-top: 1rem;
+    padding-bottom: 2rem;
     &-heading {
         position: relative;
         top: -45px;

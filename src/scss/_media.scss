@@ -114,7 +114,9 @@
             font-size: 1rem;
         }
     }
-
+    .carousel-arrows {
+        display: inline;
+    }
     .third {
         text-align: center;
         &-article1,
@@ -128,8 +130,11 @@
         }
         &-article-para {
             font-size: 0.9rem;
+            line-height: 1.3rem;
             width: auto;
             text-align: left;
+            padding-left: 0;
+            text-indent: 0;
         }
     }
 
@@ -255,13 +260,13 @@
             font-size: 1.2rem;
         }
     }
-
+    // .carousel-arrow {
+    //     top: 38%;
+    // }
     .third {
         &-article-para {
             font-size: 1.1rem;
             line-height: 1.5rem;
-            padding-left: 0;
-            text-indent: 0;
         }
     }
     .fourth {
