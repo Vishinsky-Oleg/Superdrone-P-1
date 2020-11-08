@@ -1,11 +1,19 @@
 .carousel {
+    position: relative;
     &-indicators {
         top: 0;
+        bottom: unset;
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: auto;
+        margin: 0 auto;
+        padding: 0;
         & > li {
-            height: 25px;
-            width: 28px;
+            height: 15px;
+            width: 16px;
             border-radius: 50%;
-            margin: 1rem;
+            margin: 0.3rem;
         }
     }
     position: relative;
@@ -16,12 +24,108 @@
         }
         font-size: 4rem;
         position: absolute;
-        top: 30%;
-
-        margin: 3rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin: 0 3rem;
         color: white;
         &--right {
             right: 0;
         }
     }
+}
+
+.play-btn {
+    &-outline {
+        position: absolute;
+        top: -97.5px;
+        left: -97.5px;
+    }
+    & > ion-icon {
+        position: relative;
+        left: 16px;
+        top: 11px;
+        font-size: 4rem;
+        color: $p-clr;
+    }
+    all: unset;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    z-index: 9999;
+    padding: 10px;
+    background: $pbg-clr;
+    &::before {
+        content: none;
+    }
+    &:focus {
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+#inner-circle {
+    opacity: 50%;
+    border-radius: 100;
+}
+
+#outer-circle {
+    opacity: 70%;
+}
+
+.playBtn > svg {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    background: $para-clr;
+    padding: 15px 0;
+    border-radius: 45px;
+    opacity: 30%;
+    @include transition-ease;
+    &:hover {
+        opacity: 100%;
+    }
+    & > button {
+        display: inline-block;
+        background: $pbg-clr;
+        color: $p-clr;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        padding: 20px 2px;
+        margin: 0 20px;
+
+        &::before {
+            content: none;
+        }
+    }
+    & > span {
+        display: inline-block;
+        height: 50px;
+        width: 300px;
+        background: red;
+        border-radius: 10px;
+    }
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9999;
 }

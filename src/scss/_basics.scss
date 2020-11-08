@@ -5,8 +5,7 @@ body {
 }
 
 button {
-    font-family: "proxima-nova", "Segoe UI", Tahoma, Geneva, Verdana,
-                sans-serif;
+    font-family: "proxima-nova", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     display: block;
     position: relative;
     color: $main-clr;
@@ -15,8 +14,13 @@ button {
     background: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    &:focus {
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
     &::before {
         content: "";
         display: block;
@@ -33,4 +37,3 @@ button {
         transform: skewX(20deg);
     }
 }
-

@@ -114,8 +114,18 @@
             font-size: 1rem;
         }
     }
-    .carousel-arrows {
-        display: inline;
+    .carousel {
+        &-indicators {
+            top: 0;
+            & > li {
+                height: 20px;
+                width: 22px;
+                margin: 0.3rem;
+            }
+        }
+        &-arrows {
+            display: inline;
+        }
     }
     .third {
         text-align: center;
@@ -260,9 +270,16 @@
             font-size: 1.2rem;
         }
     }
-    // .carousel-arrow {
-    //     top: 38%;
-    // }
+    .carousel {
+        &-indicators {
+            top: 3%;
+            & > li {
+                height: 25px;
+                width: 28px;
+                margin: 0.6rem;
+            }
+        }
+    }
     .third {
         &-article-para {
             font-size: 1.1rem;
