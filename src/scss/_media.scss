@@ -207,6 +207,15 @@
             margin: 2rem 0;
         }
     }
+    .custom-controls {
+        display: flex;
+    }
+    .play-btn {
+        visibility: visible;
+        &-outline {
+            visibility: visible;
+        }
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -292,3 +301,5 @@
         }
     }
 }
+
+

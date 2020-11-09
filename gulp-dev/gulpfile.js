@@ -23,9 +23,9 @@ const mainWatchFiles = root + "**/*.html",
 const jsSRC = [
     //order in which js files will be processed
     js + "main.js",
-    vendor + "jquery-2.1.1.min.js",
-    vendor + "bootstrap.js",
-    vendor + "jquery.magnific-popup.min.js",
+    // vendor + "jquery-2.1.1.min.js",
+    // vendor + "bootstrap.js",
+    // vendor + "jquery.magnific-popup.min.js",
 ];
 
 const cssSRC = [
