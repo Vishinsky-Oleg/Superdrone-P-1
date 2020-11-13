@@ -2,6 +2,7 @@
     &-hidden {
         display: none;
     }
+
     &-logo {
         & a {
             text-decoration: none;
@@ -10,6 +11,7 @@
             font-size: 1.5rem;
         }
     }
+
     position: absolute;
     top: 0;
     display: flex;
@@ -21,6 +23,7 @@
     width: 100vw;
     height: 43px;
     z-index: 3;
+
     &-list {
         //Actual list with items
         position: absolute;
@@ -36,11 +39,16 @@
         visibility: hidden;
         list-style-type: none;
         @include transition-ease;
+
         &.open {
             visibility: visible;
             transform: translateY(843px);
+            &, body {
+                overflow: hidden;
+            }
         }
     }
+
     &-item {
         font-weight: bold;
         margin-bottom: 50px;
@@ -48,17 +56,21 @@
         opacity: 90%;
         transform: translateX(150vw);
         transition: all 0.3s ease-in;
-        > a {
+
+        >a {
             text-decoration: none;
             color: inherit;
             -webkit-tap-highlight-color: transparent;
         }
+
         &.open {
             transform: translateX(0);
+
             &::before {
                 width: 60%;
             }
         }
+
         &::before {
             content: "";
             position: absolute;
@@ -88,6 +100,7 @@
             width: 27px;
             @include transition-ease;
         }
+
         &::after {
             content: "";
             background: $main-clr;
@@ -98,6 +111,7 @@
             width: 27px;
             @include transition-ease;
         }
+
         &.open {
             transform: rotate(720deg);
             background: transparent;
@@ -112,6 +126,7 @@
             }
         }
     }
+
     &-icon-bg {
         position: absolute;
         top: 15px;

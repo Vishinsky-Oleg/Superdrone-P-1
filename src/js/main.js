@@ -18,8 +18,8 @@ navBtn.addEventListener("click", function () {
         });
     }
 });
-
-// carousel setup
+// 
+// carousel interval setup
 $(".carousel").carousel({
     interval: 4000,
 });
@@ -88,7 +88,6 @@ function checkForCustom() {
             vid.addEventListener("timeupdate", setTime);
             vid.addEventListener("ended", videoEnded);
             vid.addEventListener("fullscreenchange", outOfFullscreen);
-
         });
     } else {
         playBtn.style.visibility = "hidden";
@@ -97,6 +96,7 @@ function checkForCustom() {
             vid.setAttribute("controls", '');
             vid.removeEventListener("timeupdate", setTime);
             vid.removeEventListener("ended", videoEnded);
+            vid.removeEventListener("fullscreenchange", outOfFullscreen);
         });
     }
 }
@@ -110,9 +110,6 @@ function videoEnded() {
     playBtnCircles.style.visibility = "visible";
     customControlsBar.style.visibility = "hidden";
     $(".carousel").carousel();
-    if (document.querySelector(".carousel-item.active").childNodes[1].fullscreenElement) {
-        document.querySelector(".carousel-item.active").childNodes[1].exitFullscreen();
-    }
     if (document.fullscreenElement) {
         document.exitFullscreen();
     }
@@ -309,4 +306,72 @@ customControlVolShadow.addEventListener('click', function () {
 // 
 // 
 // 
-// Checking for size of window
+// fetching items
+let products;
+const sixthSection = document.querySelector('.sixth-wrapper');
+fetch('items.json').then(function (response) {
+    if (response.ok) {
+        response.json().then(function (json) {
+            createItems(json);
+        });
+    } else {
+        console.log(
+            "Network request for products.json failed with response " +
+            response.status +
+            ": " +
+            response.statusText
+        );
+    }
+});
+
+function createItems(objects) {
+    for (object of objects) {
+        let outerWrapper = document.createElement('div');
+        let itemWrapper = document.createElement('div');
+        let imageWrapper = document.createElement('div');
+        let textWrapper = document.createElement('div');
+        imageWrapper.classList.add('sixth-item-image-wrapper');
+        textWrapper.classList.add('sixth-item-text-wrapper');
+        outerWrapper.classList.add('col-md-4');
+        itemWrapper.classList.add('sixth-item', 'col-md-12');
+        let itemName = document.createElement('h5');
+        let itemPrice = document.createElement('h4');
+        let itemImage = document.createElement('img');
+        let itemButton = document.createElement('button');
+        if (object.isNew) {
+            let itemNew = document.createElement('span');
+            itemWrapper.appendChild(itemNew);
+            itemNew.textContent = 'NEW';
+        }
+        imageWrapper.appendChild(itemImage);
+        textWrapper.appendChild(itemName);
+        textWrapper.appendChild(itemPrice);
+        textWrapper.appendChild(itemButton);
+
+        itemName.textContent = object.name;
+        itemPrice.textContent = object.price + '$';
+        itemImage.src = './dist/img/' + object.imagePath;
+        itemButton.textContent = 'ADD TO CART';
+        itemWrapper.appendChild(imageWrapper);
+        itemWrapper.appendChild(textWrapper);
+        outerWrapper.appendChild(itemWrapper);
+        sixthSection.appendChild(outerWrapper);
+    }
+
+}
+// Second slider (slickSlider)
+$(document).ready(function () {
+    $('.mySlickSlider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        // arrows: false
+        prevArrow: '<button class="slick-prev"><ion-icon name="arrow-back-outline"></ion-icon></button>',
+        nextArrow: '<button class="slick-next"><ion-icon name="arrow-forward-outline"></ion-icon></button>',
+    });
+});
