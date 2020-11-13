@@ -4,8 +4,12 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 $main-clr: white;
-$sub-clr: #1c1c1c; 
+$sub-clr: #1c1c1c;
 $para-clr: #858484;
 $wbg-clr: #000000;
 $p-clr: #000000;
@@ -14,4 +18,3 @@ $pbg-clr: #ffffff;
 @mixin transition-ease {
     transition: all 0.5s ease-in-out;
 }
-

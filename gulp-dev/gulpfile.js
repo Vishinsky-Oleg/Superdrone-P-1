@@ -6,7 +6,7 @@ const gulp = require("gulp"),
     cleanCSS = require("gulp-clean-css"),
     sourcemaps = require("gulp-sourcemaps"),
     concat = require("gulp-concat"),
-    uglify = require("gulp-uglify"),
+    uglify = require("gulp-uglify-es").default,
     lineec = require("gulp-line-ending-corrector");
 
 const root = "../"; //Root folder
@@ -22,16 +22,18 @@ const mainWatchFiles = root + "**/*.html",
 
 const jsSRC = [
     //order in which js files will be processed
+    vendor + "jquery-3.5.1.slim.min.js",
+    vendor + "bootstrap.bundle.min.js",
+    vendor + "slick.min.js",
     js + "main.js",
-    // vendor + "jquery-2.1.1.min.js",
-    // vendor + "bootstrap.js",
-    // vendor + "jquery.magnific-popup.min.js",
 ];
 
 const cssSRC = [
     //order in which cs files will be processed
-    root + "src/css/vendor/bootstrap-grid.css",
-    root + "src/css/style.css", //compiled
+    root + "src/css/vendor/slick.css",
+    root + "src/css/vendor/slick-theme.css",
+    root + "src/css/vendor/bootstrap.min.css",
+    root + "src/css/style.css" //compiled
 ];
 
 function css() {
@@ -65,6 +67,7 @@ function javascript() {
         .src(jsSRC)
         .pipe(concat("main.js"))
         .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(lineec())
         .pipe(gulp.dest(jsdist));
 }
